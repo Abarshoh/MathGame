@@ -22,7 +22,6 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
         setContent {
             NavGraph(navController = rememberNavController())
-
         }
     }
 }

@@ -8,12 +8,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.example.mathgame.HomeScreen
+import com.example.mathgame.SplashScreen
 import com.example.mathgame.ui.theme.GameScreen
 
 
 @Composable
 fun NavGraph (navController: NavHostController){
-    NavHost(navController = navController, startDestination = Screens.Home.route){
+    NavHost(navController = navController, startDestination = Screens.Splash.route){
+        composable(route = Screens.Splash.route){
+            SplashScreen(navController)
+        }
         composable(route = Screens.Home.route){
             HomeScreen(navController)
         }

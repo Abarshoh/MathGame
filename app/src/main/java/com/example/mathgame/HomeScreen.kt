@@ -28,7 +28,7 @@ import com.example.mathgame.navigation.Screens
 @Composable
 fun HomeScreen(navController: NavController) {
     Box {
-        Image(painter = painterResource(id = R.drawable.main_background), contentDescription = "Main background", modifier = Modifier.fillMaxSize(), contentScale = ContentScale.FillBounds)
+        Image(painter = painterResource(id = R.drawable.math), contentDescription = "Main background", modifier = Modifier.fillMaxSize(), contentScale = ContentScale.FillBounds)
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -36,8 +36,8 @@ fun HomeScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            PlayButton("Easy", 0, R.color.green50, navController)
-            PlayButton("Medium", 1, R.color.blue50, navController)
+            PlayButton("Easy", 0, R.color.purple_200, navController)
+            PlayButton("Medium", 1, R.color.teal_700, navController)
             PlayButton("Hard", 2, R.color.red50, navController)
         }
     }
