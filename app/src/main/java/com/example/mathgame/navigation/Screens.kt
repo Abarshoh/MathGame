@@ -7,6 +7,7 @@ sealed class Screens(val route: String) {
 
 
 
+
     fun withArgs(vararg args: String): String {
         return buildString {
             append(route)
