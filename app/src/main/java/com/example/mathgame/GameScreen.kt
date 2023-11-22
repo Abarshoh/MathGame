@@ -50,10 +50,6 @@ fun GameScreen(){
         mutableStateOf(0)
     }
 
-    var lives by remember {
-        mutableStateOf(3)
-    }
-
     var btnEnabled by remember{
         mutableStateOf(true)
     }
@@ -91,9 +87,9 @@ fun GameScreen(){
             .padding(20.dp),
             contentAlignment = Alignment.TopEnd
         ){
-            Text(text = "Lives: $lives",
-                fontSize = 20.sp,
-                color = Color.Black,)
+//            Text(text = "Lives: $lives",
+//                fontSize = 20.sp,
+//                color = Color.Black,)
 
         }
 
@@ -109,15 +105,7 @@ fun GameScreen(){
                 .padding(horizontal = 50.dp, vertical = 20.dp),
                 horizontalArrangement = Arrangement.Center) {
                 Button(onClick = {
-                    if (answer == "+"){
-                        score++
-                    }else{
-                        lives--
-                    }
-                    if (lives==0){
-                        btnEnabled = false
-                        openDialog = true
-                    }
+
                  var p = GameLogic().show()
                     question = p.question
                     answer = p.answer
@@ -132,15 +120,7 @@ fun GameScreen(){
                 Spacer(modifier = Modifier.width(50.dp))
 
                 Button(onClick = {
-                    if (answer == "-"){
-                        score++
-                    }else{
-                        lives--
-                    }
-                    if (lives==0){
-                        btnEnabled = false
-                        openDialog = true
-                    }
+
                     var p = GameLogic().show()
                     question = p.question
                     answer = p.answer
@@ -157,15 +137,7 @@ fun GameScreen(){
             Row(modifier = Modifier
                 .padding(horizontal = 50.dp, vertical = 20.dp)) {
                 Button(onClick = {
-                    if (answer == "*"){
-                        score++
-                    }else{
-                        lives--
-                    }
-                    if (lives==0){
-                        btnEnabled = false
-                        openDialog = true
-                    }
+
                     var p = GameLogic().show()
                     question = p.question
                     answer = p.answer },
@@ -178,15 +150,7 @@ fun GameScreen(){
                 Spacer(modifier = Modifier.width(50.dp))
 
                 Button(onClick = {
-                    if (answer == "/"){
-                        score++
-                    }else{
-                        lives--
-                    }
-                    if (lives==0){
-                        btnEnabled = false
-                        openDialog = true
-                    }
+
                     var p = GameLogic().show()
                     question = p.question
                     answer = p.answer },

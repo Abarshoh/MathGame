@@ -32,4 +32,9 @@ class GameLogic {
         create()
         return Problem((num1.toString()+operand+num2.toString()),answer.toString())
     }
+
+
+    fun check(r:String){
+        
+    }
 }
