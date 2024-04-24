@@ -37,7 +37,7 @@ fun SplashScreen(navController: NavController) {
             verticalArrangement = Arrangement.Center
         ) {
             Image(painter = painterResource(id = R.drawable.splashm), contentDescription = "Main background", modifier = Modifier.wrapContentSize(), contentScale = ContentScale.FillBounds)
-//           Text(text = "Welcome", fontSize = 15.sp, R.color.white)
+
         }
     }
 }

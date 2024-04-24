@@ -33,7 +33,7 @@ import com.example.mathgame.shared.SharedPreference
 @Composable
 fun HomeScreen(navController: NavController) {
     Box {
-        Image(painter = painterResource(id = R.drawable.math), contentDescription = "Main background", modifier = Modifier.fillMaxSize(), contentScale = ContentScale.FillBounds)
+        Image(painter = painterResource(id = R.drawable.mathh), contentDescription = "Main background", modifier = Modifier.fillMaxSize(), contentScale = ContentScale.FillBounds)
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -50,7 +50,7 @@ fun HomeScreen(navController: NavController) {
             val r2 = shared.getRecord(1)
             val r3 = shared.getRecord(2)
             if (r1 > 0 || r2 > 0 || r3 > 0) Text(text = "Records", fontSize = 32.sp, fontWeight = FontWeight.SemiBold, color = colorResource(
-                id = R.color.white
+                id = R.color.black
             ))
             if (r1 > 0) RecordText("Easy: $r1")
             if (r2 > 0) RecordText(text = "Medium: $r2")
@@ -61,7 +61,7 @@ fun HomeScreen(navController: NavController) {
 
 @Composable
 fun RecordText(text: String) {
-    Text(text = text, fontSize = 18.sp, color = Color.White)
+    Text(text = text, fontSize = 18.sp, color = Color.Black)
 }
 
 @Composable
@@ -74,6 +74,6 @@ fun PlayButton(text:String, levelId:Int, backColor:Int, navController: NavContro
         onClick = {
             navController.navigate(route = "game_screen/$levelId")
         }) {
-        Text(text = text, color = colorResource(id = R.color.white), fontSize = 20.sp)
+        Text(text = text, color = colorResource(id = R.color.black), fontSize = 20.sp)
     }
 }
